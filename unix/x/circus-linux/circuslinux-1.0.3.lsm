@@ -1,0 +1,14 @@
+Begin3
+Title:          Circus Linux!
+Version:        1.0.3
+Entered-date:   2001-04-28
+Description:    A game where you pop balloons by bouncing clowns on a
+                teeter-totter.
+Keywords:       circus atari 2600 paddles game
+Author:         bill@newbreedsoftware.com (Bill Kendrick)
+Maintained-by:  bill@newbreedsoftware.com (Bill Kendrick)
+Primary-site:   ftp.sonic.net /pub/users/nbs/unix/x/circus-linux
+                circus-linux-1.0.3.tar.gz
+Platforms:      Linux, Windows 32-bit, BeOS, MacOS, Unix
+Copying-policy: GPL
+End

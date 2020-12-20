@@ -1,0 +1,118 @@
+From niles@axp745.gsfc.nasa.gov Sun May 23 04:04:09 1999
+From: Frederick (Rick) A Niles <niles@axp745.gsfc.nasa.gov>
+Subject: Final Battle patch.
+
+Here's a patch which cleans up a few things in final
+battle. (including that previous counter bug!)  The only other bad one
+is the misuse of the time() function.
+
+	Thanks for the game,
+	Rick Niles.
+
+----------
+diff -urp final/convert.c final-new/convert.c
+--- final/convert.c	Tue Nov  4 21:00:40 1997
++++ final-new/convert.c	Sat May 22 23:50:05 1999
+@@ -64,13 +64,15 @@ int main(int argc, char *argv[])
+   /* minimum 5 arguments: "prog -m file -o out" */
+   
+   if (argc < 5)
+-    if (argc == 2)
+-      {
+-	sprintf(sbuf, "Unknown switch: %s", argv[1]);
+-	usage(sbuf);
+-      }
+-    else
+-      usage("Not enough parameters");
++    {
++      if (argc == 2)
++	{
++	  sprintf(sbuf, "Unknown switch: %s", argv[1]);
++	  usage(sbuf);
++	}
++      else
++	usage("Not enough parameters");
++    }
+   
+   
+   /* First argument should specify conversion mode: */
+diff -urp final/damagewin.c final-new/damagewin.c
+--- final/damagewin.c	Mon Nov  3 16:42:23 1997
++++ final-new/damagewin.c	Sat May 22 23:48:39 1999
+@@ -164,7 +164,7 @@ void updatedefense(int pln)
+   drawtext(display[pln], damagewin[pln], damagegc[pln],
+ 	   damagegeom[pln].w / 2, (UNIQUE_DAMAGABLES + 5) * fh2 - 1, str);
+   
+-  sprintf(str, "%u ", player[pln].energy);
++  sprintf(str, "%lu ", player[pln].energy);
+   drawtext(display[pln], damagewin[pln], damagegc[pln],
+ 	   damagegeom[pln].w - 34, (UNIQUE_DAMAGABLES + 5) * fh2 - 1, str);
+ }
+diff -urp final/event.c final-new/event.c
+--- final/event.c	Thu Apr  2 23:52:00 1998
++++ final-new/event.c	Sat May 22 23:48:09 1999
+@@ -734,7 +734,7 @@ void add_server(void)
+ 				  &TheirScreen, &TheirRoot);
+       
+       charptr = XFetchBuffer(TheirDisp, &len, 0);
+-      printf("Received %d bytes, charptr=%d\n", len, charptr);
++      printf("Received %d bytes, charptr=%p\n", len, charptr);
+       
+       if (charptr == NULL)
+ 	{
+diff -urp final/final.c final-new/final.c
+--- final/final.c	Thu Apr  2 23:47:03 1998
++++ final-new/final.c	Sat May 22 23:43:45 1999
+@@ -266,8 +266,8 @@ int main(int argc, char *argv[])
+ 	      /* Eat crew members (if life support is down) */
+ 	      
+ 	      if (((player[pln].damage[DAM_LIFE] == DESTROYED) ||
+-		   (player[pln].damage[DAM_LIFE] == DAMAGED) &&
+-		   (rndm(10) < 5)) && rndm(CHANCE_OF_CREWDEATH) < 1)
++		   ((player[pln].damage[DAM_LIFE] == DAMAGED) &&
++		    (rndm(10) < 5))) && rndm(CHANCE_OF_CREWDEATH) < 1)
+ 		{
+ 		  if (player[pln].crew_free > 0)
+ 		    {
+diff -urp final/lib/rndm.c final-new/lib/rndm.c
+--- final/lib/rndm.c	Sat Oct 11 02:27:40 1997
++++ final-new/lib/rndm.c	Sat May 22 23:47:09 1999
+@@ -12,10 +12,10 @@
+ 
+ void initrndm(void)
+ {
+-  struct timeval t;
++  struct tm t;
+ 
+-  time(&t);
+-  srandom(t.tv_sec);
++  mktime(&t);
++  srandom(t.tm_sec);
+ }
+ 
+ int rndm(int max)
+diff -urp final/makefile final-new/makefile
+--- final/makefile	Thu Apr  2 23:55:07 1998
++++ final-new/makefile	Sat May 22 23:50:43 1999
+@@ -10,7 +10,7 @@
+ # Makefile defines
+ 
+ POSTPROCESS=strip
+-CC=gcc
++CC=gcc -Wall -Wno-unused -Wno-implicit -ansi -D_POSIX_SOURCE
+ #XLIB=-L/usr/openwin/lib -lX11
+ XLIB=-L/usr/X11/lib -lX11
+ 
+diff -urp final/setup.c final-new/setup.c
+--- final/setup.c	Thu Apr  2 23:52:57 1998
++++ final-new/setup.c	Sat May 22 23:37:33 1999
+@@ -439,7 +439,7 @@ int add(int i, int x, int y)
+   commgeom[i].h = fh[i] * (NUM_MESSAGES + 2);
+   weapongeom[i].w = maxfontwidth(i, weapon_name_strings, UNIQUE_WEAPONS) + 48;
+   weapongeom[i].h = UNIQUE_WEAPONS * 34;
+-  upgradegeom[i].w = (maxfontwidth(i, upgrade_name_strings, UNIQUE_UPGRADES) +
++  upgradegeom[i].w = (maxfontwidth(i, upgrade_name_strings, UNIQUE_UPGRADES-1) +
+ 		      40);
+   upgradegeom[i].h = UNIQUE_UPGRADES * 32;
+   damagegeom[i].h = (UNIQUE_DAMAGABLES + 5) * (fh[i] + 2);
+

@@ -1,0 +1,496 @@
+CHANGES.txt for Tux Paint Configuration Tool
+
+Tux Paint Configuration Tool - A GUI-based configurator for
+                               Tux Paint, a simple drawing program for children.
+
+Copyright 2002-2020 by various contributors; see AUTHORS.txt
+http://www.tuxpaint.org/
+
+November 12, 2002 - May 29, 2020
+
+2020.May.29 (0.0.15)
+  * Added "'New' colors last", to match new Tux Paint feature.
+    (Also, renamed "Start Blank" group to "Starting Out".)
+
+  * Added "Stereo" option, to match new Tux Paint feature.
+
+  * Build updates:
+    + Allow DESTDIR to be used to specify a packaging directory.
+      Tim Dickson <dickson.tim@googlemail.com>
+      (Reflected for macOS: Mark K. Kim <markuskimius@gmail.com>)
+
+  * Updated translations:
+    + Basque
+      Alexander Gabilondo <alexgabi@disroot.org>
+
+    + Catalan
+      Pere Pujal i Carabantes <perepujal@gmail.com>
+
+    + French
+      Jacques Chion <jacques.chion@orange.fr>
+
+    + Fula
+      Ibrahima SARR <ibrahima.sarr@pulaagu.com>
+
+    + Galician
+      Miguel Bouzada <mbouzada@gmail.com>
+
+    + Norwegian Nynorsk
+      Karl Ove Hufthammer <karl@huftis.org>
+
+2018.August.18 (0.0.14)
+  * Updated translations:
+    + Catalan
+      Robert Buj Gelonch <rbuj@users.sf.net>
+
+    + British English translation
+      Caroline Ford <caroline.ford.work@googlemail.com>
+
+    + Dutch
+      William Heppe <heppew@yahoo.com>
+
+    + Fula
+      Ibrahima SARR <ibrahima.sarr@pulaagu.com>
+
+    + Portuguese
+      Sérgio Marques (smarquespt@gmail.com) (via Joe)
+
+    + Scottish gaelic
+      Michael Bauer <fios@akerbeltz.org>
+      Fòram na Gàidhlig
+
+    + Slovak
+      Jaroslav Rynik <jrynik@yahoo.co.uk>
+
+    + Spanish
+      Matías Bellone <matiasbellone+debian@gmail.com>
+
+  * New translations:
+    + Kabyle
+      Yacine Bouklif <yacine_tizi2003@yahoo.fr>
+
+  * Added options for "Bengali', "Bodo", "Dogri", "Kabyle",
+    "Kashmiri" (both Devanagari and Perso-Arabic),
+    "Sindhi" (both Devanagari and Perso-Arabic), and "Urdu" languages
+    (added to Tux Paint in v. 0.9.23).
+
+  * Building:
+    * Avoid using "install -D" to mkdir
+      Thomas Klausner <tk@giga.or.at>
+
+    * Update macOS build files for macOS 10.7 and later.
+      Mark K. Kim <mkkim214@gmail.com>
+
+    * Allow to override build date (in order to make builds reproducible)
+      by Chris Lamb, pushed by Bernhard M. Wiedemann
+
+2014.June.29 (0.0.13)
+  * Enabled using gettext() with UTF-8.
+    Shin-ichi TOYAMA <dolphin6k@users.sourceforge.net>
+
+  * Created a Makefile for static-linking.
+    Shin-ichi TOYAMA <dolphin6k@users.sourceforge.net>
+
+  * Added "Disable Label tool" option, to match new Tux Paint feature.
+
+  * Added options for "Acholi", "Akan", "Amharic", "Fula", "Kiga", "Luganda",
+    "Luxembourgish", "Malayalam", "Mongolian", "Northern Sotho", "Persian",
+    "Serbian (latin)" and "Venetian" languages (added to Tux Paint recently).
+
+  * Added "Accessibility" tab, with options for sticky mouse clicks,
+    keyboard-based mouse movement, and on-screen keyboard
+    (new features in Tux Paint).
+    Pere Pujal i Carabantes <pere@fornol.no-ip.org>
+
+  * Added "Joystick" tab, with options for configuring joystick controls
+    (another new feature in Tux Paint).
+    Pere Pujal i Carabantes <pere@fornol.no-ip.org>
+
+  * Fixed bug where hitting [Cancel] in file/directory chooser dialogs would
+    cause Tux Paint Config. to crash.
+
+  * Modularized some of the UI layout code.
+
+  * New translations:
+    + Acholi
+      Alfred John <agwanta2004@yahoo.co.uk>
+
+    + Arabic
+      Mohammed <ab.kareem026@gmail.com>
+
+    + Basque
+      Juan Irigoien <juanirigoien@gmail.com>
+      Ander Elortondo <ander.elor@gmail.com>
+
+    + Bulgarian
+      Todor Stoyanov
+
+    + Czech
+      Zdenìk Chalupský <chalzd@gmail.com>
+
+    + Finnish
+      Olli <ollinpostit@gmail.com>
+      Tarmo Toikkanen <tarmo.toikkanen@iki.fi>
+
+    + Fula
+      Fula Localization Project, http://www.pulaar-fulfulde.org/
+      Ibraahiima SAAR <ibrahima.sarr@pulaagu.com>
+
+    + German
+      Markus Hinkelmann <markus@mhinkelmann.de>
+
+    + Hindi
+      Gautam <gautam.2011@gmail.com>
+
+    + Inuktitut
+      Harvey Ginter <harveyginter@gmail.com>
+
+    + Latvian
+      Raivis Strogonovs <raivucis@gmail.com>
+
+    + Malay
+      Muhammad Najmi Ahmad Zabidi <najmi.zabidi@gmail.com>
+
+    + Mongolian
+      Batkhuu Ichinkhorloo <batkhu_i@yahoo.com>
+
+    + Polish
+      Piotr Kwiliński <euvcp@hotmail.com>
+
+    + Romanian
+      Vlad Ungureanu <ungureanuvladvictor@gmail.com>
+
+    + Scottish gaelic
+      Michael Bauer <fios@akerbeltz.org>
+
+    + Serbian cyrillic
+      Ivana <reci.ne.silvesteru@gmail.com> as a work in GCI
+
+    + Serbian latin
+      Ivana <reci.ne.silvesteru@gmail.com> as a work in GCI
+
+    + Venetian
+      Fabio Lazarin, El Galepìn <mistro@elgalepin.com>
+
+    + Vietnamese
+      Clytie Siddall <clytie@riverland.net.au>
+
+    + Zulu
+      sipho <sipho@translate.org.za>
+
+  * Translation Updates:
+    + French
+      Jacques Chion <jacques.chion@orange.fr>
+
+    + Greek
+      Kiriaki SERAFEIM <pse04178@rhodes.aegean.gr>
+
+    + Italian
+      Flavio Pastore <ironbishop@fsfe.org>
+
+    + Japanese
+      Shin-ichi TOYAMA <dolphin6k@users.sourceforge.net>
+
+    + Portuguese
+      Sergio Marques <smarquespt@gmail.com>
+      
+    + Russian
+      Nikolay Parukhin <parukhin@gmail.com>
+
+    + Slovak
+      Jaroslav Rynik <jrynik@yahoo.co.uk>
+
+    + Songhay
+      Abdoul Cisse <abdoulseydou@hotmail.com>
+      Mohomodou Houssouba <mh@bollag-areal.ch>
+
+    + Spanish
+      Lantz Gomez de Segura <lantzgs@yahoo.com>
+
+    + Swedish
+      Henrik Holst <henrik.holst@millistream.com>
+
+    + Turkish
+      Enes Burhan KURAN
+
+
+2009.June.28 (0.0.12)
+  * Added some missing descriptions of options to README documentation.
+
+  * Added "Disable Magic controls" option, to match new Tux Paint feature.
+
+  * Added "Load all locale fonts" option, to match new Tux Paint feature.
+
+  * Added "Save Printer Configuration" option, to expose the 'printcfg'
+    option Tux Paint has had (on Windows and Mac OS X) for some time.
+
+  * Added system to update translation template file (POT), and to
+    build and install translation files.  (Based on what's in tuxpaint)
+
+  * Added options for "Asturian", "Shuswap" and "Songhay" languages
+    (added to Tux Paint recently).
+
+  * Translated Tux Paint Config.
+    + Brazilian Portuguese
+      Frederico Goncalves Guimaraes <frederico@teia.bio.br>
+
+    + Chinese (Traditional)
+      Song Huang <songhuang.tw@gmail.com>
+
+    + Danish
+      Joe Dalton <joedalton2@yahoo.dk>
+
+    + Dutch
+      Bert Saal <bertsaal@gmail.com>
+
+    + French
+      Arnaud Champollion <arnaud.champollion@laposte.net>
+
+    + Greek
+      Serafeim Kyriaki <pse04178@rhodes.aegean.gr>
+
+    + Italian
+      Simona Riva <simona.riva@tiscali.it>
+
+    + Portuguese
+      Sergio Marques <smarquespt@gmail.com>
+
+    + Russian
+      Sergei Popov <skein@rambler.ru>
+      Nikolay Parukhin <parukhin@gmail.com>
+
+    + Slovak
+      Jaroslav Rynik <jrynik@yahoo.co.uk>
+
+    + Slovenian
+      Matej Urban <matej.urban@gmail.com>
+
+    + Songhay
+      Abdoul Cisse <abdoulseydou@hotmail.com>
+      Mohomodou Houssouba <mh@bollag-areal.ch>
+
+    + Spanish
+      Gabriel Gazzan <gabcorreo@gmail.com>
+
+    + Swedish
+      Daniel Nylander <po@danielnylander.se>
+
+    + Ukranian
+      Serhij Dubyk <serhijdubyk@gmail.com>
+
+
+2008.April.28 (0.0.11)
+  * Desktop icon now gets installed in GNOME desktops on Linux/Unix.
+    Nicolas Valcárcel <nvalcarcel@ubuntu-pe.org>, via Ubuntu bug tracker
+
+  * "Ojibwe" is the proper spelling of the language; changed option in TPC.
+
+2008.February.26 (0.0.10)
+  * Mac OS X updates
+    Martin Fuhrer <mfuhrer@gmail.com>
+
+  * Added "Allow screensaver" option, to match new Tux Paint feature.
+
+  * Added newly supported Tux Paint locales:
+    - Australian English
+    - Azerbaijani
+    - Canadian English
+    - Khmer
+    - Macedonian
+    - Occitan
+    - Zapoteco
+
+2007.October.26 (0.0.9)
+  * Adeded newly supported Tux Paint locales:
+    - Esperanto
+    - Ojibway
+    - Wolof
+
+  * Added "Data" tab, with checkbox and directory browser for
+    Tux Paint 0.9.18's new "datadir" option.
+
+  * Added "nolockfile" option (to "Data" tab).
+    ("nolockfile" config. is now accessible via config file,
+    as of Tux Paint 0.9.18)
+
+  * Added a slider to control default stamp sizes (to "Simplification" tab).
+
+2007.June.25 (0.0.8)
+  * Added a LOT of missing info to the README documentation.
+
+  * Native Cocoa file dialog boxes are now used for selecting files or
+    folders on Mac OS X.
+    Martin Fuhrer <mfuhrer@gmail.com>
+
+  * All widgets have been offset vertically to close the gap where the menu
+    bar would be found on other operating systems (e.g., Mac OS X).
+    Martin Fuhrer <mfuhrer@gmail.com>
+
+  * Writes to "~/Library/Application Support/TuxPaint/tuxpaint.cfg" on
+    Mac OS X (matches Tux Paint 0.9.17 update for Mac OS X).
+    Martin Fuhrer <mfuhrer@gmail.com>
+
+  * Tux Paint Config. can now configure Tux Paint for all users
+    (i.e., change system-wide settings) via a new "Settings for..."
+    drop-down menu.
+    Martin Fuhrer <mfuhrer@gmail.com>
+
+  * A new "Use All Users Settings" checkbox tells Tux Paint Config. to
+    delete the current user's settings file (and greys out all config. options
+    in Tux Paint Config.), causing Tux Paint to use the system-wide settings.
+    Martin Fuhrer <mfuhrer@gmail.com>
+
+  * When "Save Over Existing Pictures" was set to "Never", Tux Paint
+    was incorrectly storing option as "saveover=no" instead of
+    "saveover=new" in the config file. Fixed.
+  
+  * Added more screen resolution possibilities, and broke them up into
+    separate width and height pull-downs.  Sizes based on this diagram:
+    http://en.wikipedia.org/wiki/Image:Video_Standards.png
+
+  * Added checkbox for new "native" fullscreen resoltuion option in
+    Tux Paint 0.9.17.
+
+  * Added checkbox for new "autosave" option in Tux Paint 0.9.17.
+
+  * Added checkbox for new "hidecursor" option in Tux Paint 0.9.17.
+    Split mouse (input device) and cursor (on-screen representation of mouse)
+    into separate groups in "Mouse & Keyboard" tab.
+
+  * Added a 'Rotate' checkbox to enable a new "orient" option in Tux Paint.
+    (So we don't have to list all width/heights in both width and height
+    fields, to allow for portrait screen sizes; e.g., 768x1024.)
+
+  * Added Tux Paint 0.9.17's new languages to the pulldown menu
+    (Latvian, Telugu, Twi)
+
+  * Installs Tux Paint Config launcher into 3rd-party "Settings" menu in KDE.
+
+  * Made build output less verbose.
+
+  * Replaced fl_ask() call with fl_choice(), wrapping "Yes"/"No" options
+    in gettext() calls.
+
+  * Cleaned up copyright, URLs, etc. in code and docs.
+
+  * 'About' text is word-wrapped (78 chars) in "--help" output.
+
+  * "obj" directory no longer a Makefile target, and hence no longer
+    confusing 'make' into thinking things always need rebuilding.
+
+  * Added papersize support; pulling papersizes from libpaper
+    (via paperfirst() and papernext()).
+
+
+2006.September.9 (0.0.7)
+  * Updated "Info.plist" file for Mac OS X so that Tux Paint Config doesn't
+    conflict with Tux Paint (which was preventing Tux Paint from being managed
+    via "Parental Controls").
+
+  * Added support for compilation under Cygwin.  The same 'win32' target used
+    to compile under MinG/MSYS may be used.
+    Mark K. Kim <mkkim214@gmail.com>
+
+  * Added resolution entries for some portrait screen sizes
+    (e.g., for tablet-style laptops): 768x1024 & 1024x1280.
+
+  * Added checkbox to enable new "startblank" option, in Saving tab.
+
+  * Added option for enabling and picking "colorfile" option,
+    in Video/Sound tab.
+
+  * Updated docs with new version and new website URL.
+    Added Makefile to run Links to generate plaintext version of HTML README.
+
+
+2005.Nov.25 (0.0.6)
+  * Added "release" target, for building tarball.
+
+  * Displays friendly notice about missing FLTK headers during compilation
+    (like Tux Paint does about SDL)
+
+  * Added basic "INSTALL.txt" documentation.
+
+  * Added "[Alt]+Print command" ("altprintcommand=...") support to
+    "Printing" tab.
+
+  * Added support for "altprintalways", "altprintnever" and "altprintmod"
+    options (to show the print dialog always, never, or only when [Alt] is
+    pressed).  In the "Printing" tab.
+
+  * Added 'win32' target to Makefile, for use on Windows with MinGW/MSYS.
+    John Popplewell <john@johnnypops.demon.co.uk>
+
+  * "Apply" button would not become clickable ('active') after "Defaults"
+    was clicked!  Fixed.
+
+  * Changed Window Size / Resolution from radio buttons to a pulldown
+    containing a variety of supported window sizes.
+
+  * Added "Load System Fonts" checkbox (to set "nosysfonts=yes") to the
+    "Languages" tab.
+
+  * Added "No Button Distinction" checkbox (to set "nobuttondistinction="yes")
+    to the "Mouse & Keyboard" tab.
+    
+  * Packed some widgets in the "Saving" tab.
+
+  * Added "Disable 'Save' Button" ("nosave=yes") support to "Saving" tab.
+
+  * Updated version number in title bar; now uses "VER_VERSION" from version.h
+
+  * Added Tux Paint 0.9.15's new languages to the pulldown menu
+    (Albanian, Bulgarian, Gaelic, Galician, Georgian, Gronings, Kinyarwanda,
+    Swahili, Thai)
+
+  * Removed rectangular borders around option descriptions
+    (it looked cluttered).
+
+  * Reduced font size of option descriptions (to reduce clutter and
+    improve division between options, since rect. boxes are now gone).
+
+
+2004.Oct.02 (0.0.5)
+  * Added Mac OS X project stuff.
+    Jeffrey Drake <tuxpaint@divinecode.org>
+    
+  * Added VisualC project stuff.
+    John Popplewell <john@johnnypops.demon.co.uk>
+
+  * Activated --help, --usage and --copying command-line arguments.
+
+  * Reads all values in.
+
+  * Increased vertical size for the print command descriptions.
+
+  * Writes to ~/.tuxpaintrc under Linux/Unix, and tuxpaint.cfg under Windows.
+    (This needs more work, and should stay standardized with Tux Paint!)
+
+  * Language pulldown items include values appropriate for "tuxpaint --lang"
+    option.
+    (e.g., "Chinese (Simplified)" results in "lang=chinese-simplified")
+    
+  * Writes all values out.
+
+  * Made sure all changes cause "Apply" button to become active.
+
+  * Added some "About" text.
+    Made "About" tab the default.
+
+2004.April.1
+  * Bill updated Fluid interface based on his suggestions for labels
+    and changed option locations.
+
+  * Added "About" tab.
+
+  * Changed some interfaces (e.g., "File Input" with "Browse..." button for
+    "savedir" option).
+
+2004.???.??
+  * Torsten updated FLTK code.
+
+2004.January.30
+  * Cleaned up skeleton to introduce Torsten's FLTK code.
+
+2002.November.12
+  * Initial code skeleton 

@@ -1,0 +1,22 @@
+CHANGELOG for Mirror
+
+by Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/
+
+March 22, 2001 - March 23, 2001
+
+
+History
+-------
+  2001.Mar.23 - 0.2
+    * README split into separate documentation files.
+    * GNU GPL license included (see COPYING)
+    * Icon added to "About" window.
+    * Target for host system now named "mirror.host" (instead of the
+      Intel-centric "mirror.i386")
+    * Command-line options created (--version and --usage/--help)
+
+  2001.Mar.22 - 0.1
+    Initial release.
+    Bill Kendrick

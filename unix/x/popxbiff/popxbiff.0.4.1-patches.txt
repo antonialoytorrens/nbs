@@ -1,0 +1,57 @@
+The following patch was provided by Tom. Niijima <poortom@apmisc.ibm.co.jp>
+on Mon May 24 14:51:07 1999.
+-----------------------------------------------------------------------------
+Hello Mr. Bill Kendrick,
+
+I found popxbiff on your page and downloaded to try.
+
+It's greate!  That's what I need!
+
+Though, I found a bug in X mode popxbiff.c, that it will not put the
+flag down after you read new mail.  My fix is as below.
+
+Regards, Tom. Niijima
+----
+diff -aurN popxbiff.orig/popxbiff.c popxbiff/popxbiff.c
+--- popxbiff.orig/popxbiff.c    Sat Jan 23 03:15:53 1999
++++ popxbiff/popxbiff.c Mon May 24 23:37:07 1999
+@@ -1302,13 +1302,14 @@
+                                    }
+                                  
+                                  
+-                                 /* Set the flag up if there's any: */
+                                  
+-                                 if (how_much_mail > 0)
+-                                   flagup = 1;
+-                                 else
+-                                   flagup = 0;
+                                }
++
++                             /* Set the flag up if there's any: */
++                             if (how_much_mail > 0)
++                               flagup = 1;
++                             else
++                               flagup = 0;
+                              
+                              how_much_mail_before = how_much_mail;
+                              
+
+
+
+
+-----------------------------------------------------------------------------
+The following comment was sent by Guido Janssen <Guido.Janssen@tue.nl>
+on Fri Mar 31 07:44:25 2000:
+-----------------------------------------------------------------------------
+popxbiff needs some modifications to run with the
+
+Microsoft Exchange POP3 server version 5.5.2650.23
+
+I have compiled popxbiff on a linux machine, but there were protocol errors
+send by the POP server. My solution:
+Explicitly send CR+LF at the end of the commands instead of using "\n". May
+be that is a problem of my GNU C-compiler 2.7.2.1. 
+
+Moreover, my popxbiff first reads the server greeting and then sends the
+user data.
+-----------------------------------------------------------------------------

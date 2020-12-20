@@ -1,0 +1,78 @@
+Gem Drop X CHANGES
+------------------
+
+Changes since v.0.8:
+  * Doesn't abort if it can't play sound.
+  * Sound device opened at 44,100Hz instead of 11,025Hz (sounds better!)
+
+Changes since v.0.7:
+
+  * Keyrepeat support put back (thanks to new SDL functions)
+  * Added calls to SDL_Quit()
+  * Joystick support converted to SDL code
+  * Changed references to "mixer" to "SDL_mixer" (its new name)
+
+Changes since v.0.6:
+
+  * Removed Xlib code and replaced it with SDL.  (Lots of .c and .h files
+    removed.)
+  * Renamed documentation to have ".txt" extensions.
+  * PPM files converted to BMP (since SDL loads them natively).
+  * License changed to GPL.
+  * Compile-time options reconfigured (defaults to use sound and joystick).
+  * Command line options now in the form of "--option".
+  * Fixed a mouse movement control bug.
+  * Made level 14 a little easier.
+
+Changes since v.0.5:
+
+  * Fixed call to "Mix_PlayChannel()" to use the new SDL mixer API.
+  * Commented out calls to "Mix_Volume...()", since in SDL 0.10.0, calling
+    them screws up the audio. <:^(
+  * Patch from Matthew Rice <matt@starnix.com> to let you compile joystick
+    support in, but not _need_ a joystick plugged in to play.
+
+Changes since v.0.4:
+
+  * Game timing and difficulty was tweaked slightly.
+  * Gem-addition function corrected (it was adding blank spaces... the original
+    did not do this!)
+  * Graphics were redone, with most contributed by Bernhard Trummer.
+  * Graphic image sizes enlarged from 32x32 pixels to 48x48 pixels.
+  * Linux joystick support added.
+  * Sound routines switch to using SDL.
+  * Sound effects changed.
+  * Lots of compiler warnings fixed.
+  * Source moved into a "src/" subdirectory.
+  * Objects moved into an "obj/" subdirectory.
+  * Useful defaults put into "makefile" (most people can compile with just
+    "make").
+  * Documentation split up and cleaned up.
+  * Mouse pointer changes to represent mouse controls available at that spot.
+  * Most of the original Atari 8-bit Action! source is now included (see the
+    "action/" subdirectory).
+
+Changes since v.0.3:
+
+  * Full color!
+  * Better makefile / installation procedure
+  * Less CPU usage
+  * Timing closer to the original Gem Drop
+  * A little "you've gotten to level 15" animation
+    (like the original Gem Drop)
+
+Changes since v.0.2:
+
+  * Sound!!!
+
+Changes since v.0.1:
+
+  * Mouse controls work better.  Clicking ON the man no longer moves him.
+  * Extra key controls added.  [A]/[Z] to throw/grab.  [K]/[L] to move.
+  * A "warning" graphic replaces the bomb icon to warn you when new gems
+    are about to appear.
+  * A cool "brick wall" graphic replaces the plain white wall graphic
+    when the game is over.
+  * "-version" and "-help" switches added to the application.
+  * A spiffy title screen!
+  * You can now pause with [P] or [Space]

@@ -1,0 +1,31 @@
+about ftp://ftp.sonic.net/pub/users/nbs/lugod/
+2004.Jul.05
+
+The CDROM image (ISO) contained here is a collection of Open Source software
+for Windows that could be useful to technical writers.
+
+The Linux Users' Group of Davis ( http://www.lugod.org/ ) hopes to give away
+copies of this disc at the Society for Technical Communicators Region 8
+Conference at UC Davis in late July, 2004.
+(See: http://www.lugod.org/projects/stc/ for details on our exhibit booth.)
+
+If you need blank CDs, please post a note to LUGOD's "vox-outreach"
+mailing list ( http://www.lugod.org/mailinglists/#vox-outreach ), and we'll
+see what we can do.
+
+The disc contains the following software, along with HTML pages containing
+navigation links, links to the softwares' websites, information about the
+software, and information on Open Source and the local Linux community.
+
+  AbiWord        - Word processor
+  Dia            - Diagraming tool
+  Firefox        - Web browser
+  The Gimp       - Graphics and photo manipulator
+  Inkscape       - Vector graphics editor
+  LyX            - Document processor (includes MiKTeX)
+  Mozilla        - Web browser, email client, HTML editor, newsgroup client
+  OpenOffice.org - Office suite (word processor, spreadsheet, etc.)
+  PDFCreator     - Tool that gives Windows apps. the ability to generate PDFs
+
+This disc was compiled by Bill Kendrick ( pr@lugod.org ), July 4, 2004.
+

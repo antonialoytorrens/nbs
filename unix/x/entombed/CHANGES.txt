@@ -1,0 +1,75 @@
+CHANGES.txt for Entombed!
+
+by Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/entombed/
+
+
+2005.Jan.17
+  * Cleaned up warnings about 'string.h' functions.
+
+  * Improved maze-generation code.  (Moving through bitmasks, rather than
+    simply randomly toggling walls.)
+
+  * Expanded INSTALL.txt a little.
+
+  * Allowed Left/Right to change number of players on title screen.
+    (Without reading the docs, it wasn't obvious how to change it!)
+
+  * Added pause screen (use Tab or P key to pause).
+
+  * Players now start with 2 potions.
+
+  * Replaced in-game music (would crash sometimes!)
+
+
+2003.Feb.24
+  * Added command-line option support
+    (--fullscreen, --nosound, --blend, --help and --usage)
+
+  * Made potions move back and forth (like the original game).
+
+
+2002.Sep.30
+  * Sped up horizontal of /both/ players. (Oops!)
+
+
+2002.Aug.25
+  * Sped up horizontal movement of player (like 2600 original).
+  * Made potions appear less frequently!
+  * Animated potion.
+
+
+2002.Aug.21
+  * Changed Make-or-Break sound effect.
+  * Changed Zombie eating noise.
+  
+  * Made Zombie look less cartoony.
+  * Added creepy alpha blending.
+
+  * Changed Number-of-Players effect, slightly; added sound effect.
+  
+  * Players can die.
+  * Game can end.
+  
+  * Lives displayed at top.
+  * Number of Make-or-Breaks shown at the bottom.
+  * Progress (in one-player mode) shown at the bottom right.
+  
+  * Make-or-Break potions appear.
+
+
+2002.May.23
+  * Made Zombie move faster when he's "mad"
+  * Made levels slightly shorter
+  * Increased max FPS from 25 to 30
+  * Zombies can't go off the sides or bottom of the screen.
+  * Fixed bug where zombie wouldn't appear on right half of screen.
+  * Zombies appear at the bottom of the screen only (like the original).
+  * Images converted to display's format when loaded, for faster blitting.
+  * Made gaps between bricks see-through (so you can see mad zombies)
+
+
+2002.May.22
+  * Initial release
+  

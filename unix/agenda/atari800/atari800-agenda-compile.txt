@@ -1,0 +1,103 @@
+Compiling Atari 800 for Agenda
+
+by Bill Kendrick
+http://www.newbreedsoftware.com/bill
+
+April 4, 2001 - April 4, 2001
+
+
+First, be sure you have the mipsel-linux compiler and headers installed,
+as well as the Agenda/MIPS X11R6 libraries installed (I assume they're
+in "/usr/mipsel-linux/lib/X11/"... it may be different for you.)
+
+Download Atari800 source (tar.gz or via CVS) from http://joy.sophics.cz/a800/
+
+Apply the diffs to fix the "refresh rate" bug and add a "-tiny" window
+mode.
+
+
+1. Begin building for your host... this will cause the configuration program
+   to start up and ask you some questions:
+
+$ cd Atari800/src
+$ cp Makefile.unix Makefile
+$ make x11
+
+  computer very slow?     Y
+  snailmeter?             N
+  realtime process?       N
+  joystick?               N
+  sound?                  N
+  volume only?            N
+  sound interpolation?    N
+  sound clipping?         N
+  stereo?                 N
+  BREAK command?          N
+  hints in disassembler?  N
+  assembler in monitor?   N
+  crash menu?             N
+  compressed state files? N
+  internal palettes?      N
+
+Press CONTROL-C quickly after configure done (once compiling begins)
+
+
+2. Delete any .o files which you saw get built before you had the chance
+   to stop the build with CONTROL-C.
+
+
+3. Delete the "prompts.o" object so it can be rebuilt for MIPS
+
+
+4. Alter the Makefile so that it uses your MIPS X11 libraries, instead
+   of your host's:
+   
+   $ sed 's_LIBS="-L/usr/X11/lib -L/usr/X11R6/lib $(LIBS) -lX11"_LIBS="-L/usr/mipsel-linux/lib/X11 $(LIBS) -lX11 -lm"_' Makefile > Makefile.new
+
+   $ mv Makefile Makefile.old
+   $ mv Makefile.new Makefile
+
+
+5. Source changes:
+
+   * In "atari_x11.c", comment out the lines that call "XAutoRepeatOff" and
+     "XAutoRepeatOn".
+
+
+5. Build the program!
+
+   $ make x11 CC=mipsel-linux-gcc
+   $ mipsel-linux-strip atari800
+   $ mipsel-linux-strip --remove-section .compact_rel atari800
+   $ mipsel-linux-strip --remove-section .note atari800
+   $ mipsel-linux-strip --remove-section .comment atari800
+
+
+6. Did it work?
+
+   $ file atari800
+
+   You should see something like:
+
+     atari800: ELF 32-bit LSB executable, MIPS R3000_BE - invalid byte order,
+     version 1, dynamically linked (uses shared libs), stripped
+
+
+7. Grab ROMs
+
+   Download PC Xformer for DOS to get the legal copies of the original
+   Atari 8-bit OS and BASIC ROMs.  http://www.emulators.com/
+
+
+8. Upload
+
+   $ rsync atari800 *.ROM agenda::vr3/home/default/
+
+
+9. Run "atari800 -small" on your Agenda, from a terminal.
+
+   Answer the questions regarding location of your ROMs.
+   Set "refresh rate" to something high, like 10.
+   For the rest of the questions, you can accept the defaults.
+   Once you've done this, you'll have an "atari800.cfg" file in the
+   current directory, and you won't be asked these questions again.

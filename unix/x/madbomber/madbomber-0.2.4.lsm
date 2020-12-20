@@ -1,0 +1,13 @@
+Begin3
+Title:          Mad Bomber
+Version:        0.2.4
+Entered-date:   2002-04-20
+Description:    A game where you must catch bombs before they hit the ground.
+Keywords:       kaboom! atari 2600 paddles game
+Author:         bill@newbreedsoftware.com (Bill Kendrick)
+Maintained-by:  bill@newbreedsoftware.com (Bill Kendrick)
+Primary-site:   ftp.sonic.net /pub/users/nbs/unix/x/madbomber
+                madbomber-0.2.4.tar.gz
+Platforms:      Linux, Windows 32-bit, BeOS, MacOS, Unix, Zaurus
+Copying-policy: GPL
+End

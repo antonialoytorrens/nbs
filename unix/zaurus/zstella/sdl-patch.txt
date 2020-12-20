@@ -1,0 +1,102 @@
+SDL patch for Stella (v.1.1)
+by Bill Kendrick
+bill@newbreedsoftware.com
+2002.Apr.23 - 02:54 PDT
+
+
+About:
+------
+  This is a patch to Stella which allows it to use SDL for graphics and
+  input.  (Currently, sound is still handled by the existing "SndUnix" stuff)
+
+  The SDL patch includes an option to display the screen rotated sideways,
+  in a 240x320 window.  Perfect for PDAs (like the Sharp Zaurus).
+
+  (Get SDL from http://www.libsdl.org/ )
+
+
+  This will be deprecated soon, hopefully!  (See Stella CVS / 1.2 version)
+
+
+How to apply it:
+----------------
+
+1. get the source for Stella.
+   http://stella.atari.org/
+
+2. "mkdir stella-1.1/src/ui/sdl/"
+
+3. put "mainSDL.cxx" in that directory
+
+4. backup stella-1.1/src/build/makefile  (eg, rename it to "makefile-orig")
+
+5. put "makefile" in the 'build' directory
+
+
+How to compile:
+---------------
+* run "make sdl" to make the SDL target for the host system (240x320 sideways
+  is default, thanks to "#define SIDEWAYS" in "mainSDL.cxx")
+
+* run "make zaurus" to try to build SDL target for ARM
+  It currently fails.  HELP!!! :)
+
+
+How to run
+----------
+* Turn off keyclicks (using speaker icon on Zaurus' taskbar)
+
+* Execute the program (e.g., "./zstella 2600-roms/GAME.ROM") from the Terminal
+
+* Push [R] key for 'Reset' (eg, to begin a game)
+* Push [S] key for 'Select' (eg, change level/mode/no.players/etc.)
+
+* Push [C] to set color switch to 'Color'
+* Push [B] to set color switch to 'Black-and-White'
+
+* Push [1] or [2] to set player 1's difficulty to 'A' or 'B'  (eg, Fn+Q, Fn+W)
+* Push [3] or [4] to set player 2's difficulty to 'A' or 'B'  (eg, FN+E, Fn+R)
+
+* Use the directional pad as the joystick
+* Use the selector button (in the middle of the d-pad) for joystick firebutton
+
+* Use the stylus to simulate paddle  (tap is firebutton - not very good :^( )
+
+* Push [X] to exit  ('Cancel' doesn't work - not sure why!)
+
+
+Results
+-------
+I've tested with Adventure, Kaboom!, Pole Position, Video Pinball,
+Entombed, 
+
+
+To Do
+-----
+This port won't really go anywhere.  Stella is being ported to SDL for
+version 1.2.  I'm working with the porter and Stella's main author
+to get it to work on the Zaurus.  (Hi guys!  Feel free to swipe my code!)
+
+
+Here's the obvious list of what needs to be done:
+
+* Sound  [ will be SDL-based ]
+
+* Qt-based launcher front-end  [ base on Kstella? ]
+
+* Add ".bin" 2600 cart. mime-type to Zaurus, with icon
+  [ see 'zstella-cart.png' ]
+
+* On-screen switch controls  [ see '2600console.bmp' ]
+
+* Better paddle  [ support some key for paddle trigger, instead of
+                   MOUSEBUTTONDOWN event (tapping and dragging) ]
+
+* 270 degree rotation  [ for people who want to play the OTHER sideways ]
+
+
+
+HAVE FUN!
+
+-bill!
+

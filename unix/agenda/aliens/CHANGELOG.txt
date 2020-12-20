@@ -1,0 +1,56 @@
+CHANGELOG.txt for Aliens
+
+Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/aliens/
+
+May 18, 2001
+
+2001.May.18
+  * Game-play tweaks to make it less easy.
+  * Replaced my original XPM icon with the one Agenda Computing created.
+  * Small updates to INSTALL.txt.
+  * Empty options removed from options screen (not going to add 180-flip and
+    color invert any time soon!)
+  * "Exit" renamed to "Return to Main Menu" on options screen.
+
+2001.Apr.30
+  * Fixed a bug where game-over could be undone by pausing.
+    Thanks to Tim Peterson <TJP740@prodigy.net>
+  * Changed sound effect lengths.
+    Thanks to Bradley LaRonde of Agenda Computing.
+  * Window given a title.
+  * Options file ("$HOME/.aliensrc") created.
+  * Framerate debugging info. removed
+  * Current game's state is saved to disk when program is quit,
+    and loaded in when game is reloaded (so you can quit, and them come back
+    and continue)
+  * Ship explosion shortened
+  * "Safe mode" (ship blinks; you are invincible) added
+  * All image XPMs reduced to, at most, 16 colors
+
+2001.Apr.03
+  * More binary stripping added to Makefile (makes binary smaller)
+    Thanks to ???
+
+2001.Apr.02 - bjk
+  * Options screen started
+  * Explosions sped up
+  * Alien missiles sped up
+  * Marching game variation added
+
+2001.Apr.01 - bjk
+  * Aliens shoot missiles now
+  * Initial sound effects added (via XBell)
+  * Diving aliens ALWAYS return home if you're exploding
+
+2001.Mar.30 - bjk
+  * Aliens now march back and forth (how far dependings on how many there are)
+  * Maximum bullets player can shoot reduced from 3 to 2
+  * "Restart" option can no longer be tapped when the option isn't available
+  * More info. displayed on "LOADING" screen
+  * Player can now die by being hit by aliens
+  * Game can end (when player runs out of lives)
+
+2001.Mar.25 through 2001.Mar.29 - bjk
+  * Initial alpha releases...

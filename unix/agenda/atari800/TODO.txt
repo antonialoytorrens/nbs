@@ -1,0 +1,24 @@
+TODO.txt for Atari800 port to Agenda VR3 PDA
+
+Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/agenda-atari800/
+
+April 5, 2001
+
+
+* Speed it up!
+  * Fewer frames per second
+  * Reduce internal color palette to 16 greys
+* Sound
+  * Need to update my Agenda to support sound :)
+* Fix display
+  * Average pixels, rather than skip them
+  * Remove window border
+* Controls
+  * Build launcher (being worked on; FLTK-based)
+  * Add clickable buttons for Start/Select/Option/Reset/Break/Inverse
+  * Display alternate (Atari 8-bit style) on-screen keyboard!
+
+
+Wanna help?  Send me patches!!!

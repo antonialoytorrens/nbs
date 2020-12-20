@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_VERSION>1.15</MASTER_PAD_VERSION>
+		<MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to dissemminate information to anyone interested in their software products.  To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>New Breed Software</Company_Name>
+		<Address_1>1335 Alder Place</Address_1>
+		<Address_2></Address_2>
+		<City_Town>Davis</City_Town>
+		<State_Province>CA</State_Province>
+		<Zip_Postal_Code>95618</Zip_Postal_Code>
+		<Country>USA</Country>
+		<Company_WebSite_URL>http://www.newbreedsoftware.com/</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>Bill</Author_First_Name>
+			<Author_Last_Name>Kendrick</Author_Last_Name>
+			<Author_Email>bill@newbreedsoftware.com</Author_Email>
+			<Contact_First_Name>Bill</Contact_First_Name>
+			<Contact_Last_Name>Kendrick</Contact_Last_Name>
+			<Contact_Email>bill@newbreedsoftware.com</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<Sales_Email>bill@newbreedsoftware.com</Sales_Email>
+			<Support_Email>bill@newbreedsoftware.com</Support_Email>
+			<General_Email>bill@newbreedsoftware.com</General_Email>
+			<Sales_Phone>530-902-7416</Sales_Phone>
+			<Support_Phone>530-902-7416</Support_Phone>
+			<General_Phone>530-902-7416</General_Phone>
+			<Fax_Phone></Fax_Phone>
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>Tux Paint</Program_Name>
+		<Program_Version>0.9.23</Program_Version>
+		<Program_Release_Month>9</Program_Release_Month>
+		<Program_Release_Day>1</Program_Release_Day>
+		<Program_Release_Year>2014</Program_Release_Year>
+		<Program_Cost_Dollars>0</Program_Cost_Dollars>
+		<Program_Cost_Other_Code></Program_Cost_Other_Code>
+		<Program_Cost_Other></Program_Cost_Other>
+		<Program_Type>Open Source</Program_Type>
+		<Program_Release_Status>Major Update</Program_Release_Status>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_OS_Support>Win95,Win98,WinME,WinXP,Windows2000,WindowsVista,Windows7,Windows8,Unix,Linux,MacIntel</Program_OS_Support>
+		<Program_Language>English,Dutch,French,German,Italian,Spanish</Program_Language>
+		<Program_Change_Info></Program_Change_Info>
+		<Program_System_Requirements></Program_System_Requirements>
+		<Program_Specific_Category>Graphics</Program_Specific_Category>
+		<Program_Categories>Educational, Children</Program_Categories>
+		<File_Info>
+			<Filename_Versioned></Filename_Versioned>
+			<Filename_Previous></Filename_Previous>
+			<Filename_Generic></Filename_Generic>
+			<Filename_Long></Filename_Long>
+			<File_Size_Bytes></File_Size_Bytes>
+			<File_Size_K></File_Size_K>
+			<File_Size_MB></File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Count></Expire_Count>
+			<Expire_Based_On>Days</Expire_Based_On>
+			<Expire_Other_Info></Expire_Other_Info>
+			<Expire_Month></Expire_Month>
+			<Expire_Day></Expire_Day>
+			<Expire_Year></Expire_Year>
+		</Expire_Info>
+		<Includes_VB_Runtime>N</Includes_VB_Runtime>
+		<Includes_JAVA_VM>N</Includes_JAVA_VM>
+		<Includes_DirectX>N</Includes_DirectX>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>draw, paint, kid, child, education, picture, image, illustrate</Keywords>
+			<Char_Desc_45>A drawing program for young children.</Char_Desc_45>
+			<Char_Desc_80>A free, Open Source drawing program for young children.</Char_Desc_80>
+			<Char_Desc_250>A free, Open Source drawing program for young children.  Easy to use and fun.  Translated to over 80 languages.</Char_Desc_250>
+			<Char_Desc_450>A free, Open Source drawing program for young children (ages 3 and up).  Easy to use and fun.  Translated to over 80 languages.  Available for Windows, Linux, Mac OS X and BeOS.</Char_Desc_450>
+			<Char_Desc_2000>A free, Open Source drawing program for young children (ages 3 and up).  It has an easy to use and fun interface.  Along with standard drawing tools, like brush, lines, shapes and eraser, Tux Paint also has multiple levels of undo and redo, a collection of "Magic" special effect tools, a "Rubber Stamp" (a.k.a. "Sticker-Book") tool for placing pre-drawn shapes and photographic objects into a picture, and "Starter" images that provide coloring book imagery and scenery to paint on.
+
+Tux Paint has been translated to over 80 languages, including Spanish, French, German, Italian, Greek, Hebrew, Chinese, Japanese and Korean.  It is available for Windows, Linux, Mac OS X and BeOS and other Unixes.
+</Char_Desc_2000>
+		</English>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://www.tuxpaint.org/</Application_Info_URL>
+			<Application_Order_URL></Application_Order_URL>
+			<Application_Screenshot_URL>http://www.tuxpaint.org/screenshots/example_simple.png</Application_Screenshot_URL>
+			<Application_Icon_URL>http://www.newbreedsoftware.com/images/prodicons/tuxpaint.gif</Application_Icon_URL>
+			<Application_XML_File_URL></Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>http://www.tuxpaint.org/download/</Primary_Download_URL>
+			<Secondary_Download_URL>http://www.sourceforge.net/projects/tuxpaint/</Secondary_Download_URL>
+			<Additional_Download_URL_1></Additional_Download_URL_1>
+			<Additional_Download_URL_2></Additional_Download_URL_2>
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions>Free distribution or sale of source or binary.
+Modified binary distribution requires modified source be made available.
+See GNU General Public License (GPL) for full details.
+http://www.fsf.org/licenses/gpl.html
+</Distribution_Permissions>
+		<EULA>See: http://www.fsf.org/licenses/gpl.html
+</EULA>
+	</Permissions>
+	<ASP>
+		<ASP_Member>N</ASP_Member>
+		<ASP_Member_Number></ASP_Member_Number>
+	</ASP>
+</XML_DIZ_INFO>

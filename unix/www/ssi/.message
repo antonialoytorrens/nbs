@@ -1,0 +1,12 @@
+Welcome to New Breed Software's Web Server Side Includes Area
+
+These programs are meant to be ran via Server Side Include (SSI) calls
+in HTML pages on your webserver.
+
+Download the "makefile" to compile any or all of these simple C scripts.
+Note: You'll probably want to download these via an FTP client while
+telnet'ed into your server.
+
+Jot down this directory's address ( ftp.sonic.net:/pub/users/nbs/unix/www/ssi )
+and fire up your server's FTP client.
+

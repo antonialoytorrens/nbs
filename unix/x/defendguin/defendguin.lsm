@@ -1,0 +1,12 @@
+Begin3
+Title: Defendguin
+Version: 0.0.10
+Entered-date: 28JUL02
+Description: A bidirectionally scrolling space game based on Defender.
+Keywords: Defender, Game, Joystick
+Author: bill@newbreedsoftware.com (Bill Kendrick)
+Maintained-by: <bill@newbreedsoftware.com> (Bill Kendrick)
+Primary-Site: ftp.sonic.net /pub/users/nbs/unix/x/defendguin/
+              defendguin-0.0.10.tar.gz
+Copying-policy: GPL
+End

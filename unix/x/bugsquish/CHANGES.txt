@@ -1,0 +1,83 @@
+CHANGES.txt for Bug Squish
+
+by Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/bugsquish/
+
+0.0.6 - April 20, 2002
+----------------------
+  * Fixed "Ugh" and "Ouch" sounds for embedded version.
+
+  * Added 'Start' and 'Continue' buttons to embedded title screen.
+
+  * Game pauses when you press Escape (Cancel) in embedded version.
+
+  * Game state saved when you quit, loaded when you start again, so you can
+    unpause even if you've quit the game completely!
+
+  * Splatted bugs eventually vanish in embedded version.
+
+  * Embedded version uses hidden file (~/.bugsquish) for high score, instead
+    of a visible one (~/bugsquish.dat)
+
+  * Embedded version uses mouse motion, not mouse button press.
+    (Too easy to not lift stylus high enough.)
+
+
+0.0.5 - April 19, 2002
+----------------------
+  * Created embedded version.
+
+
+0.0.4 - November 12, 2001
+-------------------------
+  * Added name of "Blood Suckers"' author to documentation
+    (Brian Greenstone of Pangea Software).
+
+  * Alpha channel in PNGs now used, so there's less white artifacting around
+    the bugs and power-ups.
+
+  * Added a new bug-type: Pill bugs.
+
+  * Updated and corrected INSTALL.txt documentation.
+
+
+0.0.3 - December 14, 2000
+-------------------------
+  * Added Windows target.
+
+
+0.0.2 - May 21, 2000
+--------------------
+  * Replaced BMP images with PNG images, greatly reducing their size.
+    Hence, Bug Squish now requires the SDL_Image library.
+
+  * Now uses SDL's accellerated RLE blitting for colorkeyed images.
+
+  * Stress warning added to program.
+
+  * Replaced the woman's voice saying "ahh" with my own voice, which makes
+    MUCH more sense, since it's my arm in the game and the other sounds
+    are male, too. :)
+
+
+0.0.1 - April 9, 2000
+---------------------
+  * High score added.
+
+  * Data file added (high score and high wave saved, as well as final score
+    and wave from the last game).
+
+  * You can quit the "New Breed Software Presents" intro. screen early by
+    clicking the mouse or pressing a key.
+
+  * Bug graphics changed.
+
+  * Two new bug types added.
+
+  * Game speed and difficulty tweaked.
+
+
+INITIAL RELEASE 0.0.0 - March 21, 2000
+--------------------------------------
+  * Initial alpha release.

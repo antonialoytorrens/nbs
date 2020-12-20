@@ -1,0 +1,119 @@
+------------------------------------------------------------------------------
+
+From Gerhard Janka ( daemon@alpha.inf.upol.cz )
+
+William Kendrick wrote:
+> 
+> I tried running Atari800 with a refresh ratio of 10 (default is 1, and that's
+> what I normally run it at).
+> 
+> It went from not showing up at all on a "top -i" display, to appearing,
+> and taking up _50%_ of my system's CPU?  (Celeron 400 MHz running Linux)
+> 
+> Running with a fraction (eg, 0.1) causes it to just lock up and not
+> do anything.
+> 
+> Isn't this option supposed to be there to allow you to run Atari 800 with
+> fewer refreshes (for slower systems)?  Or am I confused and this isn't
+> irregular response from the program?
+
+You're right. -refresh 10 should result in only every 10th frame to be
+displayed. In addition, unfortunately, for most systems also only every
+10th time ANTIC display generation is executed but you can correct that
+easily by moving the first ANTIC_RunDisplayList() call in atari.c up a
+few lines right between the #ifndef BASIC and the #ifndef SVGA_SPEEDUP
+
+Gerhard
+
+------------------------------------------------------------------------------
+
+From: "Michael Beck" <beck@dresearch.de>
+To: <A8@alpha.inf.upol.cz>
+Subject: Re: /dev/dsp: cannot set fragments
+Date: Sat, 7 Apr 2001 17:33:39 +0200
+
+Hi,
+
+>What does this mean?
+>
+>  /dev/dsp: cannot set fragments
+
+That means, the IOCTL for setting fragments in the Linux
+Sound driver fails. If I remember right, fragments were used
+to split the sound buffer of the sound driver, to make the
+audio delay smaller. Seems your sound driver did not support
+this or teh parameters must be set differently.
+You can at first ignore this error and live with a (possible)
+higher audio delay.
+
+
+best regards,
+--
+Michael Beck                    beck@dresearch.de
+
+------------------------------------------------------------------------------
+
+From: "Krzysztof Nikiel" <knik@priv.onet.pl>
+To: <A8@alpha.inf.upol.cz>
+Subject: Re: /dev/dsp: cannot set fragments
+Date:   Mon, 9 Apr 2001 07:05:14 +0200
+
+>>What does this mean?
+>>
+>>  /dev/dsp: cannot set fragments
+>
+>That means, the IOCTL for setting fragments in the Linux
+>Sound driver fails. If I remember right, fragments were used
+>to split the sound buffer of the sound driver, to make the
+>audio delay smaller. Seems your sound driver did not support
+>this or teh parameters must be set differently.
+>You can at first ignore this error and live with a (possible)
+>higher audio delay.
+
+Unfortunately /dev/dsp handler currently refuses to work if cannot set
+fragments. 
+What sound card/driver you use? Does it support getospace? 
+If so then it would be possible to make sound handler more forgiving.
+
+Krzysztof
+
+
+------------------------------------------------------------------------------
+
+Date: Mon, 09 Apr 2001 14:55:39 +0200
+From: Petr Stehlik <pstehlik@sophics.cz>
+Subject: Re: Atari800 patches for PDA
+
+> Hey Petr!
+
+Hi William,
+
+> What's the best way to send you patches for Atari800?
+
+what about diff -u -r original_tree your_working_copy ?
+
+> How quickly do you apply them (so they're available in CVS?)
+
+within one day is OK?
+
+>   * Tweak the "-refresh" option.  Is it true that sound is turned off
+>     whenever "-refresh" is not set to 1?
+
+No. If you read through the CHANGES file you'll find there some remarks
+about new refresh system that allows you to listen to music while the
+screen is refreshed just 1/4, IIRC.
+
+>   * Maybe make the makefile more cross-compiler friendly.
+
+The Makefiles are messy. I welcome any help with improving them.
+
+> FYI, along with porting Atari800, I'm building an FLTK-based
+> disk/ROM/binary file selector slash Atari800 launcher.  Once I get it
+> working will for the Agenda, it should probably be easy to scale up
+> for desktop systems.  (FTLK works under Linux, Windows and OS/2 :) )
+
+sounds good :)
+
+Petr
+
+------------------------------------------------------------------------------

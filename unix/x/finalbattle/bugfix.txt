@@ -1,0 +1,8 @@
+December 15, 1998, Jude Anthony <Jude.J.Anthony@cpmx.saic.com> wrote:
+
++ I had some compilation problems with setup.c, around line 440:
++ upgradegeom[i].w = (maxfontwidth, ...
++   The UNIQUE_UPGRADES should be changed to UNIQUE_UPGRADES - 1 to prevent
++ array overrun and segmentation fault.
++ 
++ I'm using AIX, incidentally.

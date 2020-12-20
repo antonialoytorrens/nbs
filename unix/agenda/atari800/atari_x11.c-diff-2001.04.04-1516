@@ -1,0 +1,81 @@
+114c114,115
+< 	Huge
+---
+> 	Huge,
+> 	Tiny
+222c223
+< 	XAutoRepeatOff(display);
+---
+> 	/* XAutoRepeatOff(display); */
+226c227
+< 	if( autorepeat )
+---
+> 	/* if( autorepeat )
+228c229
+< 	else	XAutoRepeatOff(display);
+---
+> 	else	XAutoRepeatOff(display); */
+1524a1526,1527
+> 		else if (strcmp(argv[i], "-tiny") == 0)
+> 			windowsize = Tiny;
+1544a1548,1549
+> 				printf("\t-tiny         Tiny window (%dx%d)\n",
+> 					   ATARI_WIDTH / 2, ATARI_HEIGHT / 2);
+1576a1582,1585
+> 	case Tiny:
+> 		window_width = ATARI_WIDTH / 2;
+> 		window_height = ATARI_HEIGHT / 2;
+> 		break;
+2512c2521
+< 	if (windowsize == Small) {
+---
+> 	if (windowsize == Small || windowsize == Tiny) {
+2592c2601
+< 				if (windowsize == Small) {
+---
+> 				if (windowsize == Small || windowsize == Tiny) {
+2620c2629
+< 				else {
+---
+> 				else if (windowsize == Huge) {
+2626a2636,2645
+> 				else if (windowsize == Tiny)
+> 				{
+> 					if ((xpos % 2) == 0 &&
+> 					    (ypos % 2) == 0)
+> 					{
+> 						points[npoints].x = xpos / 2;
+> 						points[npoints].y = ypos / 2;
+> 						npoints++;
+> 					}
+> 				}
+2852c2871
+< 		else {
+---
+> 		else if (windowsize == Huge) {
+2856a2876,2880
+> 		else if (windowsize == Tiny) {
+> 			center_x = ATARI_WIDTH / 4;
+> 			center_y = ATARI_HEIGHT / 4;
+> 			threshold = 16;
+> 		}
+3008c3032
+< 			else {
+---
+> 			else if (windowsize == Huge) {
+3011a3036,3039
+> 			else if (windowsize == Tiny) {
+> 				mx = (ATARI_WIDTH / 2);
+> 				my = (ATARI_HEIGHT / 2);
+> 			}
+3077c3105
+< 			default:
+---
+> 			case Huge:
+3079a3108,3113
+> 				break;
+> 			case Tiny:
+> 				pot = ((float) ((ATARI_WIDTH / 2) - win_x_return) /
+> 					   (float) (ATARI_WIDTH / 2)) * 228;
+> 				break;
+> 			default:

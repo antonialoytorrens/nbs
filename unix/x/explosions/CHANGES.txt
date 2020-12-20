@@ -1,0 +1,41 @@
+CHANGES for Explosions Demo
+
+July 31, 2005
+  (Hey, it's been 4 years!)
+  * Doesn't insist on 16bpp, and therefore doesn't convert to/from 16bpp
+    if the screen's natural depth is something else (e.g., 24bpp)
+  * Blur effect made less precise, and therefore a little faster.
+
+October 6, 2001
+  * Added call to SDL_Quit() (oops!)
+
+August 5, 2001
+  * Blur effect added.
+  * Dissolve effect added.
+  * Heat (fire/flame) effect added.
+  * More comments added.
+  * Quits on SDL_QUIT event (eg, window 'close' button clicked)
+
+August 3, 2001
+  * Rotation effect added.
+  * Fade effect separated from zoom effect. (All 3 can be in any on/off combo.)
+  * Effects can be toggled on/off during execution (no more #defines)
+  * Effects now controlled with keyboard, not mouse
+  * Added "--help", "--version" commandlines and usage error
+
+August 2, 2001
+  * Blur effect code rewritten to use SDL surfaces properly (and faster)
+
+August 1, 2001
+  * Defaults for gravity and burst speed altered.
+  * Gravity and number of sparks to burst per frame made into #define'd consts
+  * Sorting changed to quick sort (uses stdlib's "qsort()")
+  * Outline animation (green dots) looks better (no pop-up)
+  * "Pepper" sprite PNG corrected
+  * Added a frame blur (vs. clear) effect ("BLUR" #define option)
+
+July 31, 2001
+  * Initial release
+
+July 30, 2001
+  * Project began

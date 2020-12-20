@@ -1,0 +1,9 @@
+Short:        Vector based Asteroids clone
+Author:       Christian Rosentreter <http://www.binaryriot.org/>
+Uploader:     Christian Rosentreter <tokai binaryriot org>
+Type:         game/shoot
+Version:      1.1
+Architecture: ppc-morphos
+
+Vector-based rock-shooting game similar to the arcade classic
+Asteroids.

@@ -1,0 +1,66 @@
+CHANGES.txt for "Agendaroids"
+
+by Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/agendaroids/
+
+March 7, 2002
+
+
+2002.03.07
+  * Inverted colors (white on black) for host and ARM targets. (-DINVERSE)
+  * Added Makefile target to build for ARM processor (eg, iPaq or Zaurus
+    running Linux and X-Window) ("make arm") - including support for the
+    larger screen (-DQUARTER_VGA).
+
+2001.10.09
+  * Slow ship rotation (12dpf (degrees per frame) now, instead of 16dpf)
+  * High score (displayed on title screen)
+  * Extra lives (every 10,000 points)
+  * Compile-time option to set button mode to 'alternative' by default.
+    Used when building for host (desktop).  ("REAL_KEYBOARD" #defined)
+  * Updated documentation (README.txt)
+  * Pause/continue implemented
+  * Paused game stored to disk, so you can quit, run later, and unpause
+  * Ship's momentum slows (unrealistic, but like the original, and reduces
+    difficulty of control)
+
+2001.10.05
+  * Added "input" windowmanager hint and title, so program will appear in
+    VRSM window lists (VR->Windows menu, and Statusbar app windowlist).
+    This works around a current bug in VRSM.
+  * Documentation updates.
+  * Returns bell pitch/duration back after quitting.
+  * Ship thrust implemented!!!
+  * Manual ship respawn override (press Shift)
+
+2001.08.24
+  * Changed X11 to X11R6 in Makefile
+  * Added "snow" target to Makefile (now defaults over "mips" target)
+
+2001.06.01
+  * Game slowed down
+  * Levels
+  * Bullets made bigger
+  * Sound on/off toggle added (lower right corner)
+  * Displays score from last play on title screen
+  * Game ends when ships run out
+  * Changed default button controls; old controls now selectable "Alternative"
+
+2001.05.25
+  * Added vector-based text-drawing capabilities
+  * Removed shading behind status area (not really useful on LCD)
+  * Entire screen cleared instead of just objects (simplifies things)
+  * Score display made thicker
+  * Lines in shapes wrap around (so popup doesn't happen on edges as much)
+  * Started work on the title screen
+  * Added a tappable "X" on the screen to quit the game
+  * Bullets made thicker
+  * XPM icon updated
+
+2001.05.22
+  * Explosion bits are lines now, instead of points.
+  * Ship rotates faster.
+
+2001.05.21
+  * Initial release

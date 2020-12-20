@@ -1,0 +1,16 @@
+CHANGES.txt for GoWeather
+
+By Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/goweather/
+
+October 24, 2001
+
+
+2001.10.24:
+  * Initial upload to SourceForge CVS
+  * CHANGES.txt created
+  * Added some "uploading to Agenda" info. to "INSTALL.txt"
+  * Updated GoWeather URL in documents and files
+  * References to "Go Weather" changed to "GoWeather"
+  * "About" dialog window created

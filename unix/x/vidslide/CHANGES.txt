@@ -1,0 +1,14 @@
+CHANGES.txt for VidSlide
+
+by Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/vidslide/
+
+Version 0.0.0
+
+June 4, 2000
+
+
+INITIAL RELEASE 0.0.0 - June 4, 2000
+---------------------
+  * Initial alpha release.

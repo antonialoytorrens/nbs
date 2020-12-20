@@ -1,0 +1,6 @@
+Welcome to New Breed Software's ICBM3D/2 Download Area.
+
+ICBM3D/2 is a 3D "Missile Command"-style game using OpenGL for graphics
+(required - try Mesa, the free alternative at http://www.mesa3d.org/) and
+SDL for sound/music (optional, http://www.devolution.com/~slouken/SDL/).
+

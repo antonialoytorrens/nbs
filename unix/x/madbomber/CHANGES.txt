@@ -1,0 +1,176 @@
+CHANGES for Mad Bomber
+
+by Bill Kendrick
+bill@newbreedsoftware.com
+http://www.newbreedsoftware.com/madbomber/
+
+Version 0.2.5
+
+March 16, 2003
+
+
+CHANGES SINCE 0.2.4
+-------------------
+  * Now takes advantage of SDL_mixer's left/right stereo panning support.
+    (For splashes and explosions.)
+
+
+CHANGES SINCE 0.2.3
+-------------------
+  * Changed the icon for the game on the Zaurus.
+
+  * Added "Continue" option for Zaurus.
+
+  * Changed color of high scorer's name on high score screen on Zaurus.
+
+
+CHANGES SINCE 0.2.2
+-------------------
+  * Gave embedded version much less music, to save space.
+
+
+CHANGES SINCE 0.2.1
+-------------------
+  * Embedded version links against SDL statically.
+
+  * Built IPK package of embedded version.
+
+  * High score screen draws more quickly in embedded version.
+
+  * Graphics display correctly in embedded version.
+
+  * 'Zen' graphics mode works right in embedded version.
+
+  * Fixed typo in title image for embedded version.
+
+  * Removed buggy volume control meters from embedded version.
+
+
+CHANGES SINCE 0.2.0
+-------------------
+  * Converted embedded graphics to BMP (for now, at least) since SDL_image
+    hasn't been ported to Zaurus yet.
+
+  * Modified "embedded" target some.  Now builds using ARM compiler and
+    links against Qtopia-based libSDL.
+
+
+CHANGES SINCE 0.1.8
+-------------------
+  * Created 'embedded' version of Mad Bomber - displays sideways at
+    one quarter the size (320x240), and uses rotated keyboard arrow key
+    controls, for viewing and playing on current PDAs
+    (eg, Sharp Zaurus SL-5500, Compaq iPAQ, etc.)
+
+    Smaller, sideways images are under "date/embedded/..."
+
+    Makefile target to build with embedded support: "make embedded"
+
+  * Updated the libSDL library URLs in README.txt
+
+  * Added info on the embedded version to README.txt
+
+
+CHANCES SINCE 0.1.7
+-------------------
+  * Makefile updated with an "install" target.
+    Based on target submitted by: Nico Schottelius <nicos@pcsystems.de>
+
+
+CHANGES SINCE 0.1.6
+-------------------
+  * Makefile updated to cross-compile for Windows correctly (added -lpng -lz)
+
+
+CHANGES SINCE 0.1.5
+-------------------
+  * BMP images replaced with PNG files, which are much smaller.
+    Hence, Mad Bomber now requires the SDL_Image library.
+
+  * Now uses SDL's accellerated RLE blitting for colorkeyed images.
+
+
+CHANGES SINCE 0.1.4a
+--------------------
+  * I had forgotten to call SDL_Quit() at the end of the program.
+    (Thanks, Paul Braman <aeon@tampabay.rr.com>)
+
+  * Added code to set application's icon.
+
+  * Reduce audio chunksize (so there should be less sound effects lag under
+    Windows).
+
+  * Changed "mixer" references to "SDL_mixer" (its new name).
+
+
+CHANGES SINCE 0.1.4
+-------------------
+  * "snprintf()" function removed (it's a GNU extension, unavailable when
+    cross-compiling).
+
+
+CHANGES SINCE 0.1.3
+-------------------
+  * A very tight, CPU-eating loop during the big explosion sound has been
+    made less CPU-intensive.
+
+  * The screen flashes during a big explosion (when you lose a bucket).
+
+  * Hitting [ ESCAPE ] while entering a high score name is like hitting
+    [ ENTER / RETURN ].  (It no longer quits the program.)
+
+
+CHANGES SINCE 0.1.2
+-------------------
+  * Included some icons (in the "icons/" subdirectory) you can use in your
+    application launcher of choice.
+
+  * Renamed all documentation files so they have ".txt" extensions.
+
+  * Updated README.txt to describe settings files under Windows, as well.
+
+  * Music during PAUSED screen fixed.
+
+  * Added high score name input and a cool high score screen.
+
+  * Zen mode background created at runtime (removing about 1MB of file data).
+
+  * Added more in-game songs.
+
+
+CHANGES SINCE 0.1.1
+-------------------
+  * The Makefile copies SDL DLL's into the working directory when building
+    a Windows 32-bit binary. (Oops!)
+
+  * Updated for mixer library 1.0.0 API- and #include-path- changes.
+
+  * Music volume bug fixed.
+
+
+CHANGES SINCE 0.1
+-----------------
+  * Documentation updated to include references to the new Linux Intel x386
+    binary distribution of Mad Bomber.
+
+  * SDL_VOLUME_BUG references removed, since SDL has been updated.
+
+  * References to SDL Mixer library now point to the library's new web
+    page.
+
+
+CHANGES SINCE 0.0
+-----------------
+  * Something special happens at 10,000 points now.
+
+  * Fixed some major CPU eating in the title and option screens.
+    (Thanks to Gabe Rosa <mr_gabe@student.djusd.k12.ca.us>)
+
+  * High score no longer counts in Two Player Vs. mode.
+
+  * Tweaked the bomb-drop rate to be more like the original Kaboom!
+
+  * The "Makefile" has been changed so that you can now cross-compile
+    Madbomber for Win32 systems.  Joe Zbiciak's <im14u2c@primenet.com>
+    "jzIntv" Intellivision Emulator for Linux helped shed some light
+    on how to mangle the Makefile and source to cross-compile for Windows.
