@@ -1,0 +1,26 @@
+Description: Buffer overflow in vectoroids
+ Whilst performing a minimal source code audit of vectoroids I
+ discovered that it contains a buffer overflow condition - because
+ it doesn't test the length of one of the environmental variables
+ it uses.
+Bug-Debian: http://bugs.debian.org/203255
+Author: Steve Kemp <skx@debian.org>
+Reviewed-by: Christian T. Steigies <cts@debian.org>
+Last-Update: 2003-07-28
+--- a/vectoroids.c
++++ b/vectoroids.c
+@@ -596,8 +596,12 @@
+ #ifndef _WIN32
+   /* snprintf(statefile, sizeof(statefile), "%s/.vectoroids-state",
+ 	   getenv("HOME")); */
+-  sprintf(statefile, "%s/.vectoroids-state",
+-	   getenv("HOME"));
++  if (getenv("HOME") != NULL )
++    {
++      memset(statefile, '\0', sizeof(statefile));
++      snprintf(statefile,sizeof(statefile)-1, "%s/.vectoroids-state",
++	       getenv("HOME"));
++    }
+ #else
+   sprintf(statefile, "vectoroids-state.dat");
+ #endif
