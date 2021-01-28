@@ -1,7 +1,5 @@
 Unofficial Github Repository from http://newbreedsoftware.com and ftp://ftp.tuxpaint.org
 
-Unofficial Github Repository from http://newbreedsoftware.com and ftp://ftp.tuxpaint.org
-
 ### Packaging Status
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/3dpong.svg?header=3dpong)](https://repology.org/project/3dpong/versions)
@@ -34,8 +32,6 @@ Unofficial Github Repository from http://newbreedsoftware.com and ftp://ftp.tuxp
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/supertux2.svg?header=supertux2)](https://repology.org/project/supertux2/versions)
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/ttt.svg?header=ttt)](https://repology.org/project/ttt/versions)
-
 [![Packaging status](https://repology.org/badge/vertical-allrepos/tuxmath.svg?header=tuxmath)](https://repology.org/project/tuxmath/versions)
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/tuxpaint.svg?header=tuxpaint)](https://repology.org/project/tuxpaint/versions)
@@ -44,4 +40,4 @@ Unofficial Github Repository from http://newbreedsoftware.com and ftp://ftp.tuxp
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/xbomber.svg?header=xbomber)](https://repology.org/project/xbomber/versions)
 
-** Missing: 2k, colortest, mpgfx, teetertorture, vidslide **
+** Missing: 2k, colortest, mpgfx, teetertorture, ttt, vidslide **
